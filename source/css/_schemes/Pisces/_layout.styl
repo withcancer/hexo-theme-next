@@ -16,7 +16,7 @@
 
 .header-inner {
   position: absolute;
-  top: 0;
+  top: 40px;
   overflow: hidden;
   padding: 0;
   width: $sidebar-desktop;
@@ -28,8 +28,10 @@
     .container & { width: $sidebar-desktop; }
   }
   +tablet-mobile() {
-    position: relative;
-    width: auto;
+    z-index: 9999;
+    top: 0;
+    position: fixed;
+    width: 100%;
     border-radius: initial;
   }
 }
@@ -51,6 +53,7 @@
   padding: $content-desktop-padding;
   width: $content-wrap;
   background: white;
+  margin-top: 25vh;
   min-height: 700px;
   box-shadow: $box-shadow-inner;
   border-radius: $border-radius-inner;
@@ -59,12 +62,14 @@
     width: 100%;
     padding: 20px;
     border-radius: initial;
+    margin-top: 18vh;
   }
   +mobile() {
     width: 100%;
     padding: 20px;
     min-height: auto;
     border-radius: initial;
+    margin-top: 18vh;
   }
 }
 

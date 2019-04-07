@@ -31,13 +31,11 @@
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
-    <div class="headband"></div>
+    <div class="jumbotron"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">{% include '_partials/header/index.swig' %}</div>
     </header>
-
-    {{ partial('_partials/github-banner.swig', {}, {cache: theme.cache.enable}) }}
 
     <main id="main" class="main">
       <div class="main-inner">
